@@ -5,13 +5,27 @@ const mysql = require('mysql')
 const app = express()
 
 app.use(cors())
-mysql.createConnection({
+const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'crud'
 })
 
-app.listen(3000, () => {
+app.get('/', (req, res) => {
+    const sql = "SELECT * FROM students"
+    db.query(sql, (err, data) =>{
+        if(err){
+            return res.json(err)
+        }
+        if(data)
+        {
+            return res.json(data)
+        }
+        
+    })
+})
+
+app.listen(8000, () => {
     console.log('listening')
 })
