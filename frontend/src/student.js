@@ -1,9 +1,9 @@
 import  React  from 'react'
 
-function student(){
-    <div>
-
-    </div>
+function Student(){
+    return (
+    <div>student</div>
+)
 }
 
-export default student
+export default Student;
