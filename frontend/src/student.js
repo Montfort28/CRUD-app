@@ -13,7 +13,7 @@ function Student(){
 
     return (
     <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
-        <div className='w-50 bg-white rounded'>
+        <div className='w-50 bg-white rounded p-3'>
             <button className='btn btn-success'>Add +</button>
             <table className='table'>
                 <thead>
