@@ -5,6 +5,7 @@ const mysql = require('mysql')
 const app = express()
 
 app.use(cors())
+
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -15,14 +16,8 @@ const db = mysql.createConnection({
 app.get('/', (req, res) => {
     const sql = "SELECT * FROM students"
     db.query(sql, (err, data) =>{
-        if(err){
-            return res.json(err)
-        }
-        if(data)
-        {
-            return res.json(data)
-        }
-        
+        if(err) return res.json("error")
+        return res.json(data)    
     })
 })
 
