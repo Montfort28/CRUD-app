@@ -22,6 +22,7 @@ function Student(){
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +31,10 @@ function Student(){
                             <tr key={i}>
                                 <td>{data.Name}</td>
                                 <td>{data.Email}</td>
+                                <td>
+                                    <button >Update</button>
+                                    <button>Delete</button>
+                                </td>
                             </tr>
                         ))
                     }
